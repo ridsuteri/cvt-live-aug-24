@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    background-color: bisque;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .item {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+  }
+  
+  .item1 {
+    background-color: blueviolet;
+  }
+  .item2 {
+    background-color: tomato;
+  }
+  

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Resume</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Internal CSS -->
+    <style>
+      /* Element Selector */
+      h1 {
+        color: blue;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Class Selector */
+      .section-heading {
+        color: darkred;
+        text-decoration: underline;
+      }
+
+      /* ID Selector */
+      #resume-heading {
+        font-size: 2rem;
+      }
+
+      /* Attribute Selector */
+      a[href*="linkedin"] {
+        color: green;
+        text-decoration: none;
+      }
+
+      a[href*="linkedin"]:hover {
+        text-decoration: underline;
+      }
+
+      /* Pseudo-class: hover */
+      li:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* Pseudo-element */
+      p::before {
+        content: "Summary: ";
+        font-weight: bold;
+      }
+
+      /* Tree-structural pseudo-classes */
+      li:first-child {
+        font-weight: bold;
+      }
+
+      /* Combinators */
+      ol > ul {
+        margin-left: 20px;
+        list-style-type: disc;
+      }
+
+      img {
+        /* border: 2px solid black; */
+        border-radius: 50%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+
+      body {
+        margin: 20px;
+        font-family: Arial, sans-serif;
+      }
+      .center-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 200px; 
+      }
+
+      /* Optional: To add some space between the elements */
+      .center-block img {
+        margin-bottom: 10px;
+      }
+
+      .center-block span {
+        margin-top: 10px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <header class="center-block">
+        <img
+          src="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?q=80&w=2725&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          height="100"
+          alt="Profile picture"
+        />
+        <h1 id="resume-heading">Your  Name</h1>
+        <!-- Inline CSS -->
+        <span style="color: green">
+          <i>+91 12390876454</i> |
+          <a href="https://linkedin.com/in/riddhi-suteri" target="_blank"
+            >linkdIn/your-linkedin</a
+          >
+          |
+          <b>Software Engineer</b>
+        </span>
+      </header>
+
+      <h3 class="section-heading">Profile Summary</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </section>
+
+    <hr />
+    <section>
+      <h3 class="section-heading">Education</h3>
+      <ol type="I">
+        <li>ABC Engine. College</li>
+        <ul>
+          <li>2019-2023</li>
+          <li>Information Technology</li>
+          <li>9.2 GPA</li>
+        </ul>
+        <li>XYZ High School</li>
+        <ul>
+          <li>2019</li>
+          <li>PCM</li>
+          <li>90%</li>
+        </ul>
+      </ol>
+    </section>
+
+    <hr />
+    <section>
+      <h3 class="section-heading">Experience</h3>
+      <ul>
+        <li>Software Engineer at ABC Tech</li>
+        <ul>
+          <li>July 2023 - Present</li>
+          <li>Worked on front-end development using React.js</li>
+        </ul>
+        <li>Intern at XYZ Solutions</li>
+        <ul>
+          <li>Jan 2022 - May 2022</li>
+          <li>Assisted in developing web applications</li>
+        </ul>
+      </ul>
+    </section>
+
+    <hr />
+    <section>
+      <h3 class="section-heading">Skills</h3>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript, React)</li>
+        <li>Database Management (MySQL, MongoDB)</li>
+        <li>Version Control (Git, GitHub)</li>
+      </ul>
+    </section>
+
+    <hr />
+    <section>
+      <h3 class="section-heading">Certifications</h3>
+      <ul>
+        <li>Certified Front-End Developer - ABC Academy</li>
+        <li>Database Management Certification - XYZ Institute</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        <b>Contact:</b> riddhi.suteri@example.com
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.inline-center {
+    text-align: center;
+}
+
+.div-block {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+.block-center{
+    margin: 0 auto;
+}

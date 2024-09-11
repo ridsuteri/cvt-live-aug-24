@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* default value */
+    /* box-sizing: content-box;  */
+}
+.div1{
+    /* box-sizing: border-box; */
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 10px;
+    /* margin: 50px; */
+}
+.div2{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    /* border-style: solid;
+    border-color: black;
+    border-width: 2px; */
+}

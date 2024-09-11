@@ -1,0 +1,19 @@
+i {
+    background-color: red;
+    display: block;
+    height: 50px;
+  }
+  
+  h5 {
+    background-color: yellow;
+    display: inline;
+    height: 50px;
+  }
+  
+  /* inline block is inline capable of custom dimensions */
+  span {
+    background-color: green;
+    display: inline-block;
+    height: 50px;
+  }
+  

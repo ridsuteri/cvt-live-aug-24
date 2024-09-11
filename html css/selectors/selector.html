@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    /* descendent selector */
+      /* div p {
+        color: red;
+      } */
+
+    /* child selector */
+    /* div > p{
+        color: red
+    } */
+
+    /* adjacent sibling */
+    /* div + p{
+        color: red;
+    } */
+
+    /* general sibling */
+    div ~ p{
+        color: red;
+    }
+
+    button:hover{
+        color: blueviolet;
+    }
+
+    /* ul li:nth-child(3){
+        color:salmon
+    } */
+
+    /* ul li:last-child{
+        color:salmon
+    } */
+     
+    li{
+        list-style: none;
+    }
+    
+    li::before{
+        content:"🔥 "
+    }
+
+    li::after{
+        content: " 🫡";
+    }
+     
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Immediate p tag</p>
+      <section>
+        <p>Descendent but not immediate child</p>
+      </section>
+    </div>
+
+    <p>Immediate/Adjacent sibling of div</p>
+    <span>dummy element</span>
+    <p>General sibling of div tag</p>
+    <button>Button</button>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+  </body>
+</html>
