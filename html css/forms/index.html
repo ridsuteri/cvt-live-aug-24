@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- we usually write the api end point which processes the info -->
+    <form action="mailto:ridsuteri@gmail.com" method="post">
+        <label for="fname">Name:</label>
+        <input id="fname" name="fullname" type="text" placeholder="Enter your full name" minlength="3" maxlength="10"> <br>
+
+        Email: <input name="email" type="email"> <br>
+        Children: <input name="noOfChildren" type="number" min="0" max="4"> <br>
+        Password: <input type="password" name="password" required> <br>
+        D.O.B: <input type="date" min="2024-09-11" max="2024-09-12"> <br>
+        Fav color: <input type="color"> <br>
+        Gender: <input type="radio" name="gender" value="M"> Male <input type="radio" name="gender" value="F"> Female <input type="radio" name="gender" value="O"> Others <br>
+        Occupation: 
+        <select name="occupation">
+            <option value="Student">Student</option>
+            <option value="private">private sector</option>
+            <option value="public">public sector</option>
+            <option value="us bro us" selected>unemployed</option>
+        </select> <br>
+        coupon code: <input type="text" value="Riddhi100" readonly> <br>
+        <input type="checkbox"> I agree to T&C <br>
+        <!-- <input type="button" value="Submit">
+        <input type="button" value="Reset"> -->
+        <button type="submit">Submit</button>
+        <button type="rest">Reset</button>
+    </form>
+
+    <hr>
+    <iframe src="../box model/margin.html" frameborder="2"></iframe>
+</body>
+
+</html>
