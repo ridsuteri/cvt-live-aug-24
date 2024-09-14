@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>User Registration Form</h2>
+
+        <form action="/submit-form" method="POST">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" required placeholder="Enter a password">
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" minlength="8" required placeholder="Re-enter password">
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="form-group">
+                <label for="profile-pic">Profile Picture:</label>
+                <input type="file" id="profile-pic" name="profile-pic" required>
+            </div>
+
+            <!-- Comments -->
+            <div class="form-group">
+                <label for="comments">Comments/Feedback:</label>
+                <textarea id="comments" name="comments" rows="4" maxlength="200" placeholder="Leave your comments here"></textarea>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="form-group">
+                <label for="subscription">Newsletter Subscription:</label>
+                <select id="subscription" name="subscription" required>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly" selected>Monthly</option>
+                </select>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-buttons">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

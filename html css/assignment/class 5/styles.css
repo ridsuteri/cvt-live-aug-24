@@ -1,0 +1,100 @@
+/* General Form Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group input[type="radio"], 
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-buttons input[type="submit"],
+.form-buttons input[type="reset"] {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.form-buttons input[type="submit"]:hover,
+.form-buttons input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+/* Input Focus */
+input:focus, 
+textarea:focus, 
+select:focus {
+    outline: none;
+    border: 2px solid #007bff;
+}
+
+/* Styling for Required Fields */
+input:invalid, 
+textarea:invalid, 
+select:invalid {
+    border-color: red;
+}
+
+input:valid, 
+textarea:valid, 
+select:valid {
+    border-color: green;
+}
+
