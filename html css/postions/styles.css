@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dummy-div{
+    height: 150px;
+    width: 150px;
+    background-color: aquamarine;
+}
+.parent-posiotioned-element{
+    height: 600px;
+    width: 600px;
+    background-color: aquamarine;
+    /* positioned element had postion: absolute */
+    /* in simple terms, it was positioned */
+    position: absolute;
+    left: 100px;
+    top: 100px;
+
+    /* to overpower any other element superimposing it  */
+    /* we use z-index */
+    z-index: 200;
+}
+.parent-element{
+    height: 600px;
+    width: 600px;
+    background-color: goldenrod;
+    /* for non positioned element, position: static */
+    /* in simple terms, it is not positioned */
+    position: static;
+    left: 100px;
+    top: 100px;
+}
+
+.absolute-div{
+    height: 200px;
+    width: 200px;
+    background-color: thistle;  
+    position: absolute;
+    /* margin-left: 100px;
+    margin-top: 50px; */
+    left: 50px;
+    top: 50px;  
+}
+
+.relative-element{
+    height: 200px;
+    width: 200px;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    position: relative;
+    right: 200px;
+    top: 20px;
+}
+.fixed-div{
+    height: 100px;
+    width: 50px;
+    background-color: blueviolet;
+    position: fixed;
+    left: 0;
+    top:45vh;
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.container{
+    /* height: 100vh; */
+    width: 50vw;
+    background-color: bisque;
+}
+html{
+    font-size: 30px;
+}
+
+.rem-block{
+    font-size: 2rem;
+}
+
+.em-block-parent{
+    font-size: 40px;
+}
+.em-block-subparent{
+    font-size: 0.5em; 
+    /* 0.5 * 40px = 20px */
+}
+
+.em-block-child{
+    font-size: 1em;
+    /* its parent had 20px */
+    /* 1 * 20px = 20px */
+}
