@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.div1{
+    background-color: red;
+    flex-grow: 1;
+}
+
+.div2{
+    background-color: violet;
+    flex-grow: 5;
+}
