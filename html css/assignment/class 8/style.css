@@ -1,0 +1,35 @@
+#grid {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+#grid>div {
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+    background: green;
+}
+
+#grid>div:nth-child(1) {
+    grid-column: span 4;
+}
+
+#grid>div:nth-child(2) {
+    grid-row: span 4;
+}
+
+#grid>div:nth-child(4) {
+    grid-column: span 2;
+}
+
+#grid>div:nth-child(5) {
+    grid-column: span 2;
+}
+
+#grid>div:nth-child(10) {
+    grid-column: span 3;
+}
