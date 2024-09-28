@@ -1,6 +1,6 @@
 // 1. Find the Maximum Number in an Array
 // Create a function findMax(arr) that loops through an array of numbers and returns the largest number.
-function findMax(arr) {
+let max = function findMax(arr) {
   let max = arr[0];
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] > max) {
@@ -32,3 +32,8 @@ function filterEvens(arr) {
   }
   return evens;
 }
+
+
+let arr = [29, 67, 69, 45, 98];
+
+console.log(max(arr));
