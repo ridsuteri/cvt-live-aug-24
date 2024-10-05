@@ -4,7 +4,9 @@
 //  Add a property breed to dog. Log both species and breed from the dog object.
 
 const animal = { species: "mammal" };
-const dog = Object.create(animal);
+// const dog = Object.create(animal);
+const dog = {};
+dog.__proto__ = animal;
 dog.breed = "Labrador";
 
 console.log(dog.species); 
@@ -17,7 +19,7 @@ console.log(dog.breed);
 function Car(make, model) {
     this.make = make;
     this.model = model;
-  }
+}
   
   // Step 2: Add the honk method to Car's prototype
   Car.prototype.honk = function() {
