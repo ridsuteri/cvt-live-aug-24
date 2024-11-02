@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    width: 10rem;
+    height: 15rem;
+    padding: 0.6rem;
+}
+
+.online{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: green;
+    position: relative;
+    z-index: 2;
+}
+
+
+.offline{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: gray;
+}
