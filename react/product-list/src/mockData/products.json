@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Wireless Headphones",
+        "price": 79.99
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "price": 49.99
+    },
+    {
+        "name": "Smartwatch",
+        "price": 199.99
+    },
+    {
+        "name": "Laptop Stand",
+        "price": 29.99
+    },
+    {
+        "name": "Portable Charger",
+        "price": 24.99
+    }
+]
