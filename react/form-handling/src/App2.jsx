@@ -1,22 +1,25 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
-  let [priority, setPriority] = useState(0);
-  let [description, setDescription] = useState('');
+function App2() {
+  let [newTask, setNewTask] = useState({})
   let [task, setTask] = useState([
     { id: 1234, priority: 2, description: "priority task 2" },
     { id: 2345, priority: 1, description: "priority task 1" },
   ])
 
+  const handleChange = (key, value)=>{
+   setNewTask({
+        ...newTask,
+        [key]: value
+    })
+  }
+
   const handleSubmit = (e)=>{
     e.preventDefault();
-    if(priority !=null && description.trim() != ""){
-      setTask([...task, {id: Date.now() ,priority, description}]);
-      console.log(task)
-    }
-    setPriority(0);
-    setDescription("");
+    // if(newTask.priority !=null && newTask.description.trim() != ""){
+      setTask([...task, {id: Date.now(), ...newTask}]);
+    // }
   }
 
   return (
@@ -25,12 +28,8 @@ function App() {
 
       <div>
         <form onSubmit={handleSubmit}>
-          <input type="number" min={0} value={priority} placeholder="Priority" onChange={(e)=>{
-            setPriority(parseInt(e.target.value))
-          }} />
-          <input type="text" placeholder="Description" value={description} onChange={(e)=>{
-            setDescription(e.target.value)
-          }} />
+          <input name="priority" type="number" min={0} placeholder="Priority" onChange={(e)=>{ handleChange(e.target.name, parseInt(e.target.value)) }} />
+          <input name="description" type="text" placeholder="Description" onChange={(e)=>{ handleChange(e.target.name, e.target.value) }} />
           <button>Add Task</button>
         </form>
       </div>
@@ -52,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
