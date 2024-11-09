@@ -1,0 +1,22 @@
+[
+    {
+        "mediaUrl": "https://example.com/images/news1.jpg",
+        "title": "Groundbreaking Discovery in Space Exploration",
+        "description": "Scientists have made a groundbreaking discovery that could change the way we understand space travel. The discovery was made during a recent expedition to the outer reaches of the solar system, unveiling new insights about interstellar objects."
+    },
+    {
+        "mediaUrl": "https://example.com/images/news2.jpg",
+        "title": "Global Economy Shows Signs of Recovery",
+        "description": "After a year of economic downturn, global markets are showing signs of recovery, driven by growth in technology and renewable energy sectors. Experts predict a gradual but steady return to pre-pandemic levels."
+    },
+    {
+        "mediaUrl": "https://example.com/images/news3.jpg",
+        "title": "New Healthcare Advances Promise Longer Lifespan",
+        "description": "A new breakthrough in healthcare technology promises to extend the average human lifespan by several years. The development focuses on advanced genetic therapies and personalized medicine tailored to individual genetic profiles."
+    },
+    {
+        "mediaUrl": "https://example.com/images/news4.jpg",
+        "title": "Tech Giant Unveils Revolutionary Smartphone",
+        "description": "A leading tech company has unveiled a revolutionary new smartphone, packed with cutting-edge features, including an AI-powered camera, holographic display, and ultra-fast charging technology. The device is expected to disrupt the market."
+    }
+]
