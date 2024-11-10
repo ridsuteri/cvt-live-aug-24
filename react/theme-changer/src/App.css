@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    height: 100vh;
+    width: 100vw;
+    padding: 3rem;
+}
+
+.Header{
+    height: 20vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.Body{
+    height: 70vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.light{
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+
+.dark{
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+}
