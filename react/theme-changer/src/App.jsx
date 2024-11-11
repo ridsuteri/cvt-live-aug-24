@@ -1,27 +1,26 @@
 import Body from "./Body";
 import Header from "./Header";
-import { ThemeProvider, ThemeContext } from "./ThemeContext";
+import { ThemeContext, ThemeProvider } from "./ThemeContext";
 import "./App.css";
-import texts from './text'
 import { useContext } from "react";
+
 function App() {
-  let themeObj = useContext(ThemeContext);
-
-  // ______hint for assignmet____
-  // let language = useContext(ThemeContext);
-  // let {helloText} = texts[language] 
-  // console.log(themeObj);
-
   return (
     <ThemeProvider>
-      <div className={themeObj.theme == "light" ? "light App" : "dark App"}>
-        {/* ... any further components */}
-        <Header />
-        <Body />
-        {/* {helloText} */}
-      </div>
+      <AppContent />
     </ThemeProvider>
   );
 }
+
+const AppContent = () => {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    <div className={theme === "light" ? "light App" : "dark App"}>
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
 export default App;
