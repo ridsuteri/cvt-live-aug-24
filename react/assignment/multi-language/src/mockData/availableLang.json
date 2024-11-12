@@ -1,0 +1,22 @@
+[
+    {
+        "name": "English",
+        "code": "en",
+        "label": "English"
+    },
+    {
+        "name": "Hindi",
+        "code": "hi",
+        "label": "हिंदी"
+    },
+    {
+        "name": "French",
+        "code": "fr",
+        "label": "Français"
+    },
+    {
+        "name": "Spanish",
+        "code": "sp",
+        "label": "Español"
+    }
+]

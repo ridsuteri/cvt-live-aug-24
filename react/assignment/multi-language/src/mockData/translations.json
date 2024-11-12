@@ -1,0 +1,22 @@
+{
+    "hi": {
+        "helloText": "नमस्ते सभी को",
+        "description": "यह एक हिंदी में अनुवादित पाठ है",
+        "currentLang": "वर्तमान भाषा"
+    },
+    "en": {
+        "helloText": "Hello Everyone",
+        "description": "This is a translated text in English",
+        "currentLang": "Current Language"
+    },
+    "sp": {
+        "helloText": "Hola a todos",
+        "description": "Este es un texto traducido al español",
+        "currentLang": "Idioma actual"
+    },
+    "fr": {
+        "helloText": "Bonjour tout le monde",
+        "description": "Ceci est un texte traduit en français",
+        "currentLang": "Langue actuelle"
+    }
+}
