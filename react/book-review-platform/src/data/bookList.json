@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "bookname": "The Great Gatsby",
+      "ratings": 4.2,
+      "authorname": "F. Scott Fitzgerald"
+    },
+    {
+      "id": 2,
+      "bookname": "To Kill a Mockingbird",
+      "ratings": 4.8,
+      "authorname": "Harper Lee"
+    },
+    {
+      "id": 3,
+      "bookname": "1984",
+      "ratings": 4.6,
+      "authorname": "George Orwell"
+    },
+    {
+      "id": 4,
+      "bookname": "Moby-Dick",
+      "ratings": 3.9,
+      "authorname": "Herman Melville"
+    },
+    {
+      "id": 5,
+      "bookname": "Pride and Prejudice",
+      "ratings": 4.5,
+      "authorname": "Jane Austen"
+    },
+    {
+      "id": 6,
+      "bookname": "The Catcher in the Rye",
+      "ratings": 4.0,
+      "authorname": "J.D. Salinger"
+    },
+    {
+      "id": 7,
+      "bookname": "The Hobbit",
+      "ratings": 4.7,
+      "authorname": "J.R.R. Tolkien"
+    },
+    {
+      "id": 8,
+      "bookname": "Brave New World",
+      "ratings": 4.3,
+      "authorname": "Aldous Huxley"
+    },
+    {
+      "id": 9,
+      "bookname": "War and Peace",
+      "ratings": 4.1,
+      "authorname": "Leo Tolstoy"
+    },
+    {
+      "id": 10,
+      "bookname": "The Odyssey",
+      "ratings": 4.4,
+      "authorname": "Homer"
+    }
+  ]
+  
