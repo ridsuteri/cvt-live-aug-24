@@ -3,11 +3,11 @@ import Home from './pages/Home'
 import Profile from './pages/Profile'
 import BookList from './pages/BookList'
 import BookDetails from './pages/BookDetails'
-
+import './App.css'
 function App() {
 
   return (
-    <div className='App'>
+    <div className='container'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>} />

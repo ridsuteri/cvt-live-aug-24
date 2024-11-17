@@ -7,11 +7,22 @@ const BookList = () => {
     <div>
       <TopNavbar />
       <hr />
-      {bookList.map((book, index) => (
-        <div className="container">
-            <BookCard key={book.id} book={book} />
-          </div>
-      ))}
+      <h1>BookList</h1>
+      <div className="input-group mb-4">
+        <input
+          className="input-group-text ms-auto"
+          placeholder="Search books"
+          id="inputGroupSelect04"
+        />
+        <button className="btn btn-outline-secondary" type="button">
+          Button
+        </button>
+      </div>
+      <div className="row ">
+        {bookList.map((book, index) => (
+          <BookCard key={book.id} book={book} />
+        ))}
+      </div>
     </div>
   );
 };
