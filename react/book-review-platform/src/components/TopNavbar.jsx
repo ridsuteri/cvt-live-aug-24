@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 function TopNavbar() {
+  let {logout} = useContext(AuthContext)
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -20,7 +23,7 @@ function TopNavbar() {
               <Link to={"/profile"}>Profile</Link>
             </Nav>
           </Nav>
-          <Nav className="ms-auto">
+          <Nav className="ms-auto" onClick={logout}>
             <i className="fa-solid fa-right-from-bracket"></i>
           </Nav>
         </Navbar.Collapse>

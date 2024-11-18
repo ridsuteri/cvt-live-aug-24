@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import BookList from "./pages/BookList";
@@ -7,21 +7,22 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   return (
     <div className="container">
-      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/booklist" element={<BookList />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/bookdetails/:bookId" element={<BookDetails />} />
+
+          {/* protected routes, need to have logged in inorder to access */}
+          <Route path="/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>} />
+          <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="/booklist" element={<PrivateRoute><BookList /></PrivateRoute>} />
+          <Route path="/profile" element={<PrivateRoute><Profile /> </PrivateRoute>} />
+          <Route path="/bookdetails/:bookId" element={<PrivateRoute><BookDetails /></PrivateRoute>} />
         </Routes>
-      </BrowserRouter>
     </div>
   );
 }

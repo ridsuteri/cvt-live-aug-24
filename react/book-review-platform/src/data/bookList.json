@@ -5,6 +5,8 @@
     "authorname": "F. Scott Fitzgerald",
     "genre": "Classic",
     "published": "1925",
+    "isFeatured": "true",
+    "isTrending":"true",
     "reviews": [
       {
         "id": 1,
