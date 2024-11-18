@@ -1,7 +1,7 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import {Link} from 'react-router-dom'
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 function TopNavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -10,9 +10,18 @@ function TopNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav className='mx-4 text-decoration-none'><Link to={'/'}>Home</Link></Nav>
-            <Nav className='mx-4 text-decoration-none'><Link to={'/booklist'}>BookList</Link></Nav>
-            <Nav className='mx-4 text-decoration-none'><Link to={'/profile'}>Profile</Link></Nav>
+            <Nav className="mx-4 text-decoration-none">
+              <Link to={"/dashboard"}>Dashboard</Link>
+            </Nav>
+            <Nav className="mx-4 text-decoration-none">
+              <Link to={"/booklist"}>BookList</Link>
+            </Nav>
+            <Nav className="mx-4 text-decoration-none">
+              <Link to={"/profile"}>Profile</Link>
+            </Nav>
+          </Nav>
+          <Nav className="ms-auto">
+            <i className="fa-solid fa-right-from-bracket"></i>
           </Nav>
         </Navbar.Collapse>
       </Container>
