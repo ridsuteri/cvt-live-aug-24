@@ -6,7 +6,7 @@
     "genre": "Classic",
     "published": "1925",
     "isFeatured": "true",
-    "isTrending":"true",
+    "isTrending": "true",
     "reviews": [
       {
         "id": 1,
@@ -28,6 +28,116 @@
     "authorname": "Harper Lee",
     "genre": "Fiction",
     "published": "1960",
+    "isFeatured": "true",
+    "isTrending": "false",
     "reviews": []
+  },
+  {
+    "id": "3",
+    "bookname": "1984",
+    "authorname": "George Orwell",
+    "genre": "Dystopian",
+    "published": "1949",
+    "isFeatured": "false",
+    "isTrending": "true",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "A chilling portrayal of a totalitarian regime.",
+        "rating": 5,
+        "reviewer": "Alex Johnson"
+      },
+      {
+        "id": 2,
+        "content": "Thought-provoking and relevant even today.",
+        "rating": 5,
+        "reviewer": "Chris Taylor"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "bookname": "Pride and Prejudice",
+    "authorname": "Jane Austen",
+    "genre": "Romance",
+    "published": "1813",
+    "isFeatured": "true",
+    "isTrending": "true",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "A delightful story of love and wit.",
+        "rating": 5,
+        "reviewer": "Emily Davis"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "bookname": "The Catcher in the Rye",
+    "authorname": "J.D. Salinger",
+    "genre": "Fiction",
+    "published": "1951",
+    "isFeatured": "false",
+    "isTrending": "true",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "A relatable exploration of teenage angst.",
+        "rating": 4,
+        "reviewer": "Michael Brown"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "bookname": "Moby Dick",
+    "authorname": "Herman Melville",
+    "genre": "Adventure",
+    "published": "1851",
+    "isFeatured": "true",
+    "isTrending": "false",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "A compelling narrative about obsession.",
+        "rating": 4,
+        "reviewer": "Anna White"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "bookname": "The Road",
+    "authorname": "Cormac McCarthy",
+    "genre": "Post-Apocalyptic",
+    "published": "2006",
+    "isFeatured": "false",
+    "isTrending": "true",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "Haunting and beautifully written.",
+        "rating": 5,
+        "reviewer": "David Green"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "bookname": "Little Women",
+    "authorname": "Louisa May Alcott",
+    "genre": "Fiction",
+    "published": "1868",
+    "isFeatured": "true",
+    "isTrending": "false",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "A heartwarming tale of family and love.",
+        "rating": 5,
+        "reviewer": "Sophia Martinez"
+      }
+    ]
   }
 ]

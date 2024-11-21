@@ -1,35 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import TopNavbar from "../components/TopNavbar";
 import Footer from "../components/Footer";
 
 const Dashboard = () => {
-
   let [currentPage, setCurrentPage] = useState(1);
   let [totalPage, setTotalPage] = useState(3);
   let [apiResponse, setApiResponse] = useState([]);
-  
-  useEffect(()=>{
-    fetchData(currentPage)
-  },[currentPage])
 
-  useEffect(()=>{
-    fetchData(1)
-  },[])
+  const fetchData = useCallback(async (page) => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/books?page=${page}&limit=10`);
+      const data = await response.json();
+      setApiResponse(data.data);
+      setTotalPage(data.totalPages || 3);
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  }, []);
 
+  useEffect(() => {
+    fetchData(currentPage);
+  }, [currentPage, fetchData]);
 
-  const fetchData = async (currentPage)=>{
-    let response = await fetch(`http://localhost:8000/api/books?page=${currentPage}&limit=10`);
-    let data = await response.json();
-    setApiResponse(data.data);
-    // console.log(data);
-  }
+  const handlePageChange = useCallback(
+    (pageNumber) => {
+      if (pageNumber >= 1 && pageNumber <= totalPage) {
+        setCurrentPage(pageNumber);
+      }
+    },
+    [totalPage]
+  );
 
-  const handlePageChange = (pageNumber)=>{
-    // if(pageNumber > 0 && pageNumber < totalPage){
-      setCurrentPage(pageNumber)
-      console.log(currentPage)
-    // }
-  }
+  const formattedApiResponse = useMemo(() => {
+    return apiResponse.map((user) => ({
+      ...user,
+      fullName: `${user.title} (${user.author})`, 
+    }));
+  }, [apiResponse]);
 
   return (
     <div>
@@ -54,26 +61,40 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {apiResponse.map((user) => (
+                    {formattedApiResponse.map((user) => (
                       <tr key={user.id}>
                         <td>{user.id}</td>
-                        <td>{user.title}</td>
+                        <td>{user.fullName}</td>
                         <td>{user.author}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-              <div className="card-footer">
-                <button onClick={()=>{handlePageChange((currentPage-1))}}>Previous</button>
-                <button onClick={()=>{handlePageChange((currentPage+1))}}>Next</button>
+              <div className="card-footer d-flex justify-content-between">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="btn btn-primary"
+                >
+                  Previous
+                </button>
+                <span>
+                  Page {currentPage} of {totalPage}
+                </span>
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPage}
+                  className="btn btn-primary"
+                >
+                  Next
+                </button>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
