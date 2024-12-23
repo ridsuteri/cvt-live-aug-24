@@ -3,6 +3,7 @@ const hostname = '127.0.0.1'; // http://localhost
 const port = 3000;  // : 3000
 
 const server = createServer((req, res) => {
+  // this is baaaad, we should give 200 for success
   res.statusCode = 400;
   res.setHeader('Content-Type', 'text/plain');
   //   console.log(req);
