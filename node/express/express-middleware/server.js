@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
+const dotenv = require('dotenv')
+dotenv.config();
 
 const PORT = 3000
 
@@ -13,11 +15,16 @@ app.use(express.static('./assets'));
 
 const authMiddleware = (req, res, next)=>{
     console.log('touched a custom middleware')
-    next();
+    if(req.session.user){
+        next();
+    }
+    else{
+        res.redirect('/')
+    }
 }
 
 app.use(session({
-    secret: 'keyboard cat',
+    secret: process.env.SESION_SECRET,
     resave: true,
     saveUninitialized: false,
 }))
@@ -40,7 +47,6 @@ app.post('/login', (req, res)=>{
 })
 
 app.get('/dashboard',authMiddleware, (req, res)=>{
-    // console.log('incoming request>>', req.session);
     res.send('dashboard');
 })
 
