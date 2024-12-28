@@ -1,0 +1,10 @@
+<%- include('./partials/header.ejs') %>
+<body class="dashboard">
+    <% if(username == "admin"){ %>
+       <h1>Baap of all users</h1> 
+    <% } else{ %>
+        
+        <%= username %>
+    <% } %>
+</body>
+</html>
