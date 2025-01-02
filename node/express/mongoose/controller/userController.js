@@ -51,11 +51,8 @@ const updateUser = async (req, res)=>{
     try{
         let { userId } = req.params;
         let userObj = req.body
-        console.log(userId)
-        console.log(userObj)
-        let res = User.findOneAndUpdate({username: userId}, {userObj})
-        console.log(res)
-        if(res){
+        let result = await User.findOneAndUpdate({username: userId}, userObj)
+        if(result){
             res.status(200).json({ data: "User updated successfully" });
         }
         else{
@@ -64,7 +61,7 @@ const updateUser = async (req, res)=>{
     }catch(err){
         res
         .status(500)
-        .json({ data: `Intenal server error : ${JSON.stringify(err)}` });
+        .json({ data: `Intenal server error : ${err}` });
     }
 }
 
