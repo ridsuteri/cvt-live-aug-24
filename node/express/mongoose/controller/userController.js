@@ -1,4 +1,6 @@
 const User = require("../models/User");
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const showUsers = async (req, res) => {
   try {
@@ -20,9 +22,8 @@ const showUsers = async (req, res) => {
 const addUser = async (req, res) => {
   try {
     const user = req.body;
-    console.log(user)
+    user.password = await bcrypt.hash(user.password, saltRounds);
     const userObj = new User(user);
-    console.log(userObj)
     await userObj.save();
     res.status(201).json({ data: "User added successfully" });
   } catch (err) {
